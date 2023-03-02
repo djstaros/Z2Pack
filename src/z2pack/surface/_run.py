@@ -208,7 +208,7 @@ def _run_surface_impl(  # pylint: disable=too-many-locals
                 d_ctrl.update(data)
 
             result = SurfaceResult(data, ctrl_container.stateful, ctrl_container.convergence)
-            save_thread.send(copy.deepcopy(result))
+            copy.deepcopy(result)
 
             return result
 
